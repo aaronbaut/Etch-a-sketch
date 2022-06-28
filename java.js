@@ -22,7 +22,8 @@ body.insertBefore(button, container)
 
 button.addEventListener('click', () =>{
     let foo = prompt('Input number of squares on each side (max 100)')
-    for(;i<foo;i++) {
+    let bar = foo**2;
+    for(;i<bar;i++) {
         const content = document.createElement('div')
         content.classList.add('content')
         container.appendChild(content)
