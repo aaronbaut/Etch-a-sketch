@@ -14,3 +14,8 @@ contents.forEach((content) => {
         e.target.style.background = 'black';
     });
 });
+const body = document.querySelector('body');
+const button = document.createElement('button');
+button.classList.add('button');
+button.innerText = 'Submit';
+body.insertBefore(button, container)
