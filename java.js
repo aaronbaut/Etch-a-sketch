@@ -1,11 +1,12 @@
 const container = document.querySelector('#container')
 
 let i = 0;
-// for(;i<256;i++) {
-//     const content = document.createElement('div')
-//     content.classList.add('content')
-//     container.appendChild(content)
-//     }
+let x = 256;
+for(;i<x;i++) {
+    const content = document.createElement('div')
+    content.classList.add('content')
+    container.appendChild(content)
+    }
 
 const contents = document.querySelectorAll('.content');
 contents.forEach((content) => {
@@ -22,10 +23,5 @@ body.insertBefore(button, container)
 
 button.addEventListener('click', () =>{
     let foo = prompt('Input number of squares on each side (max 100)')
-    let bar = foo**2;
-    for(;i<bar;i++) {
-        const content = document.createElement('div')
-        content.classList.add('content')
-        container.appendChild(content)
-        }
+    x = foo**2;
  })
