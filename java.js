@@ -9,7 +9,7 @@ for(i=0;i<256;i++) {
 
 const contents = document.querySelectorAll('.content');
 contents.forEach((content) => {
-    content.addEventListener('mouseover', () => {
-        console.log('hi')
+    content.addEventListener('mouseover', (e) => {
+        e.target.style.background = 'black';
     });
 });
