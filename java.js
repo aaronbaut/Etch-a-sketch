@@ -17,5 +17,6 @@ contents.forEach((content) => {
 const body = document.querySelector('body');
 const button = document.createElement('button');
 button.classList.add('button');
-button.innerText = 'Submit';
+button.innerText = 'Change squares';
 body.insertBefore(button, container)
+
