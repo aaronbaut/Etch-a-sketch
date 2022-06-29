@@ -7,6 +7,12 @@ for(;i<x;i++) {
     content.classList.add('content')
     container.appendChild(content)
     }
+function deleteDiv() {
+    for(;i>0;i--) {
+        const content = document.querySelector('.content');
+        content.remove();
+    }
+}
 
 const contents = document.querySelectorAll('.content');
 contents.forEach((content) => {
@@ -24,4 +30,6 @@ body.insertBefore(button, container)
 button.addEventListener('click', () =>{
     let foo = prompt('Input number of squares on each side (max 100)')
     x = foo**2;
+    deleteDiv();
+    
  })
