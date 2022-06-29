@@ -17,12 +17,15 @@ function deleteDiv() {
     }
 }
 
-const contents = document.querySelectorAll('.content');
-contents.forEach((content) => {
-    content.addEventListener('mouseover', (e) => {
-        e.target.style.background = 'black';
+function hoverEffect() {
+    const contents = document.querySelectorAll('.content');
+    contents.forEach((content) => {
+        content.addEventListener('mouseover', (e) => {
+            e.target.style.background = 'black';
+        });
     });
-});
+};
+hoverEffect();
 const body = document.querySelector('body');
 const button = document.createElement('button');
 button.classList.add('button');
@@ -36,5 +39,6 @@ button.addEventListener('click', () =>{
     x = foo**2;
     let i=0;
     makeDiv();
+    hoverEffect();
     
  })
