@@ -3,9 +3,11 @@ const container = document.querySelector('#container')
 let i = 0;
 let x = 256;
 function makeDiv() {
+    let bar = 800/(Math.sqrt(x))
 for(;i<x;i++) {
     const content = document.createElement('div')
     content.classList.add('content')
+    content.style.padding = `${bar}px ${bar}px ${bar}px ${bar}px`;
     container.appendChild(content)
     }
 }
@@ -16,6 +18,7 @@ function deleteDiv() {
         content.remove();
     }
 }
+
 
 function hoverEffect() {
     const contents = document.querySelectorAll('.content');
@@ -33,6 +36,7 @@ button.innerText = 'Change squares';
 body.insertBefore(button, container)
 
 
+
 button.addEventListener('click', () =>{
     deleteDiv();
     let foo = prompt('Input number of squares on each side (max 100)')
@@ -40,5 +44,6 @@ button.addEventListener('click', () =>{
     let i=0;
     makeDiv();
     hoverEffect();
+    
     
  })
