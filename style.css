@@ -1,17 +1,15 @@
 #container {
     display:flex;
-    flex-direction: ;
+    flex-grow: 1;
     flex-wrap: wrap;
-    width: 800px;
-    height: 800px;
+    width: 500px;
+    height: 500px;
     
 }
 
 
 .content {
-    padding: 22px 22px 22px 22px;
-    background-color: red;
-    border: solid;
+    background-color: grey;
 
     flex:auto;
 }
