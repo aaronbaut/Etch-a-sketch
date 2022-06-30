@@ -3,7 +3,7 @@ const container = document.querySelector('#container')
 let i = 0;
 let x = 256;
 function makeDiv() {
-    let bar = 800/(Math.sqrt(x))
+    let bar = 250/(Math.sqrt(x))
 for(;i<x;i++) {
     const content = document.createElement('div')
     content.classList.add('content')
@@ -35,15 +35,23 @@ button.classList.add('button');
 button.innerText = 'Change squares';
 body.insertBefore(button, container)
 
-
+function changeSq() {
+    let foo = prompt('Input number of squares on each side (max 100)')
+   if (foo>100) {
+       alert('Enter a number less than 100')
+   } else {
+    x = foo**2;
+    let i=0;
+   }
+   
+}
 
 button.addEventListener('click', () =>{
     deleteDiv();
-    let foo = prompt('Input number of squares on each side (max 100)')
-    x = foo**2;
-    let i=0;
+    changeSq();
+    // let foo = prompt('Input number of squares on each side (max 100)')
+    // x = foo**2;
+    // let i=0;
     makeDiv();
     hoverEffect();
-    
-    
  })
